@@ -1,0 +1,223 @@
+/* ---------- GLOBAL ---------- */
+
+body{
+font-family:Arial;
+margin:0;
+color:white;
+text-align:center;
+background:linear-gradient(-45deg,#0b0b0b,#1b3c59,#c53b1c,#ede54b);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* ---------- NAV ---------- */
+
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:20px;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(6px);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+}
+
+nav a::after{
+content:"";
+width:0%;
+height:2px;
+background:yellow;
+position:absolute;
+left:0;
+bottom:-5px;
+transition:0.5s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:3em;
+animation:fadeSlide 2s ease forwards;
+}
+
+@keyframes fadeSlide{
+from{opacity:0; transform:translateY(-40px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+/* ---------- FLOATING BALLOONS ---------- */
+
+.balloon{
+position:fixed;
+bottom:-150px;
+width:80px;
+animation:floatUp 20s linear infinite;
+opacity:0.7;
+}
+
+.balloon:nth-child(1){left:10%; animation-duration:18s;}
+.balloon:nth-child(2){left:40%; animation-duration:22s;}
+.balloon:nth-child(3){left:70%; animation-duration:25s;}
+
+@keyframes floatUp{
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);}
+}
+
+/* ---------- CARDS ---------- */
+
+.section{
+padding:70px 20px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+width:250px;
+padding:20px;
+border-radius:15px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
+/* ---------- TABLE ---------- */
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:70%;
+background:rgba(255,255,255,0.1);
+}
+
+th,td{
+padding:10px;
+border:1px solid white;
+}
+
+tr:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:yellow;
+color:black;
+border-radius:30px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:white;
+}
+/* SECTIONS
+
+.section{
+padding:70px 20px;
+background:#b91414;
+} */
+/* CARDS */
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+background:#222;
+padding:20px;
+width:250px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.1);
+background:#333;
+}
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+padding:20px;
+background:rgba(0,0,0,0.4);
+margin-top:50px;
+}
+
+form{
+background:#333;
+width: 345px;
+margin:auto;
+padding: 40px;
+border-radius:10px;
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+background:yellow;
+padding:10px;
+border:none;
+border-radius:10px;
+
+cursor:pointer;
+transition:0.3s;
+}
+button:hover{
+transform:scale(1.2);
+background:white;
+}
