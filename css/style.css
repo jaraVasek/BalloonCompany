@@ -175,15 +175,21 @@ background:#333;
 /* GALLERY */
 
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:10px;
-padding:20px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
 }
 
 .gallery img{
-width:100%;
-border-radius:10px;
+    width:150px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
 }
 
 /* ---------- FOOTER ---------- */
