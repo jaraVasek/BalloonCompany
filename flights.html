@@ -71,7 +71,12 @@
         <p>
             Flights run March to October depending on weather conditions.
             Strong wind or rain may cancel flights for safety.
-        </p>
+        </p><br>
+        <!-- Weather API Section -->
+
+        <h2>Current Weather in Dublin 🌤️</h2>
+        <button onclick="getWeather()">Get Weather</button>
+        <p id="weatherID">Current Weather Here</p>
 
     </div>
 
@@ -110,6 +115,25 @@
         <p>© 2026 SkyDream Balloon Company</p>
 
     </footer>
+
+    <script>
+
+        //Weather API
+        async function getWeather() {
+            display = document.getElementById("weatherID");
+            display.textContent = "Loading...";
+            try {
+                response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=53.3498&longitude=6.2603&current_weather=true");
+                data = await response.json();
+                console.log(data);
+                currentTemp = data.current_weather.temperature;
+                display.textContent = `The Temperature in Dublin is: ${currentTemp} C`;
+            } catch (error) {
+                display.textContent = `Error: Could not fetch weather. ${error}`;
+            }
+        }
+
+    </script>
 </body>
 
 </html>
