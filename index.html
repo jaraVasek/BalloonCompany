@@ -129,32 +129,27 @@
         <p>⭐ Best Adventure Experience</p>
 
     </section>
-    <section class="section">
+   <section class="section gallery-section">
 
-        <h2>Gallery</h2>
+    <h2>Gallery</h2>
 
-        <div class="gallery">
-            <a href="images/balloon4.jpg" target="galleryFrame">
-                <img src="images/balloon4.jpg" width="150">
-            </a>
+    <!-- Image Viewer -->
+    <div class="gallery-viewer">
+        <iframe id="mainImage" src="images/balloon4.jpg"></iframe>
+    </div>
 
-            <a href="https://picsum.photos/900/500?1" target="galleryFrame">
-                <img src="https://picsum.photos/300?1">
-            </a>
+    <!-- Thumbnails -->
+    <div class="gallery">
 
-            <a href="https://picsum.photos/900/500?2" target="galleryFrame">
-                <img src="https://picsum.photos/300?2">
-            </a>
-            
-             <a href="images/ballon3.jpg" target="galleryFrame">
-                <img src="images/ballon3.jpg" width="150">
-            </a>
+        <img src="images/balloon4.jpg" onclick="changeImage(this)">
+        <img src="images/ballon3.jpg" onclick="changeImage(this)">
+        <img src="https://picsum.photos/900/500?1" onclick="changeImage(this)">
+        <img src="https://picsum.photos/900/500?2" onclick="changeImage(this)">
+        <img src="https://picsum.photos/900/500?3" onclick="changeImage(this)">
 
-        </div>
-        <iframe name="galleryFrame" src="images/Baloon1.jpg" width="900" height="500"></iframe>
+    </div>
 
-
-    </section>
+</section>
 
 
     <section class="section">
@@ -171,6 +166,11 @@
         <p>© 2026 SkyDream Balloon Adventures</p>
 
     </footer>
+    <script>
+function changeImage(img){
+    document.getElementById("mainImage").src = img.src;
+}
+</script>
 </body>
 
 </html>

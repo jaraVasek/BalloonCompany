@@ -174,22 +174,42 @@ background:#333;
 }
 /* GALLERY */
 
+.gallery-section{
+    text-align:center;
+}
+
 .gallery{
     display:flex;
+    justify-content:center;
     gap:15px;
     flex-wrap:wrap;
-    margin-bottom:20px;
+    margin-top:20px;
 }
 
 .gallery img{
     width:150px;
-    border-radius:10px;
+    height:100px;
+    object-fit:cover;
+    border-radius:8px;
     cursor:pointer;
     transition:0.3s;
 }
 
 .gallery img:hover{
-    transform:scale(1.05);
+    transform:scale(1.1);
+}
+
+.gallery-viewer{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.gallery-viewer iframe{
+    width:900px;
+    height:500px;
+    border:none;
+    border-radius:10px;
 }
 
 /* ---------- FOOTER ---------- */
